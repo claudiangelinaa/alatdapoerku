@@ -73,7 +73,7 @@ const login = (req,res) => {
             if(result.length === 0){
                 res.status(200).send({
                     error: true,
-                    message: 'Email does not exist'
+                    message: 'Email and password did not match'
                 })
             }else{
                 jwt.sign({id: result[0].id, email: result[0].email}, '123abc', (err,token) => {
