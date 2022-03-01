@@ -8,7 +8,8 @@ const getAllProducts = (req,res) => {
 
             res.status(200).send({
                 error: false,
-                message: 'Successfully fetch all data'
+                message: 'Successfully fetch all data',
+                data: result
             })
         } catch (error) {
             res.status(500).send({
