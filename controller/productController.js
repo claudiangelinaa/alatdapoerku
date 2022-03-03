@@ -12,6 +12,7 @@ const getAllProducts = (req,res) => {
                 data: result
             })
         } catch (error) {
+            console.log(error)
             res.status(500).send({
                 error: true,
                 message: 'Failed to fetch data'

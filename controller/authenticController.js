@@ -103,7 +103,16 @@ const login = (req,res) => {
     })
 }
 
+const checkLogin = (req,res) => {
+    let dataToken = req.dataToken
+
+    res.status(200).send({
+        message: 'Token valid',
+        token: dataToken
+    })
+}
 module.exports = {
     register: register,
-    login: login
+    login: login,
+    checkLogin: checkLogin
 }
